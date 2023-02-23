@@ -1,0 +1,33 @@
+I can insert & delete customer
+
+looking nice 
+buttons are interactive 
+sending info in buttons to database
+
+
+
+
+
+
+
+
+
+
+
+
+
+delete customer:
+
+Name=?, DateOfBirth=?, Email=?, PhoneNumber=?
+
+
+need todo:
+
+update 
+Querying
+valadating
+
+
+need to fix:
+
+date of birth

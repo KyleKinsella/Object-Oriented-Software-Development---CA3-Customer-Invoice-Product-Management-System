@@ -1,0 +1,13 @@
+- Database = Minimum 3 tables (e.g Customer, Invoice, Product)
+
+- Front end GUI
+
+-Should provide CRUD (create, retrieve, update, delete) operations
+on the database
+
+– Should demonstrate use of a variety of Swing components (But-
+tons, Textboxes, etc.)
+
+-Provide Error Handling in your code
+
+-Use your git repo to store the code for the project
