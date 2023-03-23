@@ -1,0 +1,2 @@
+log out system
+admin user and normal user

@@ -36,6 +36,8 @@ public class login extends loginPage {
 		JPasswordField passwordLabel = new JPasswordField();
 
 		JButton loginButton = new JButton("Login");
+		JButton cancelButton = new JButton("Cancel");
+        
 
 
 		loginButton.addActionListener(new ActionListener() {
@@ -88,13 +90,31 @@ public class login extends loginPage {
 			}
 
 		});
+
+
+
+		cancelButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+
+				Container parent = cancelButton.getParent();
+
+				while (!(parent instanceof JFrame)) {
+					parent = parent.getParent();
+				}
+				JFrame frame = (JFrame) parent;
+				frame.dispose();
+			}
+		});
 	
 		frame.add(email);
 		frame.add(emailLabel);
 		frame.add(password);
 		frame.add(passwordLabel);
 		frame.add(loginButton);
-		//frame.add(cancelButton);
+		frame.add(cancelButton);
 	
 		// Make the frame visible
 		frame.setVisible(true);

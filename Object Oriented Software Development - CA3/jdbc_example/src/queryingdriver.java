@@ -8,7 +8,7 @@ import java . sql .SQLException;
 public class queryingdriver {
 public static void main( String args [] ){
 // database URL
-final String DATABASE_URL = "jdbc:mysql://localhost/customer";
+final String DATABASE_URL =  "jdbc:mysql://localhost/project";
 
 
 Connection connection = null ;
@@ -20,7 +20,7 @@ try {
     connection = DriverManager.getConnection(DATABASE_URL, "root", "");
 
     // create Prepared Statement for querying data in the table
-    pstat = connection.prepareStatement("SELECT CustomerId, Name, DateOfBirth, Email, PhoneNumber FROM Customer");
+    pstat = connection.prepareStatement("SELECT * FROM Customer");
     // query data in the table
     resultSet = pstat.executeQuery();
     // process query results

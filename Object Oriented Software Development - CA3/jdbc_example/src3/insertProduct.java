@@ -185,7 +185,20 @@ public class insertProduct {
 				
 			
 				
+			cancelButton.addActionListener(new ActionListener() {
 
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					
+					Container parent = cancelButton.getParent();
+
+					while (!(parent instanceof JFrame)) {
+						parent = parent.getParent();
+					}
+					JFrame frame = (JFrame) parent;
+					frame.dispose();
+				}
+			});
 			
 
 			

@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
@@ -31,7 +32,8 @@ public class loginPage extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
           // TODO Auto-generated method stub
-          
+          JLabel insertWhitespace = new JLabel("            ");
+          panel.add(insertWhitespace);
 
           JButton insertInvoiceButton = new JButton("Insert Invoice");
           panel.add(insertInvoiceButton);
@@ -90,8 +92,13 @@ public class loginPage extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
           // TODO Auto-generated method stub
+          JLabel deleteWhitespace = new JLabel("            ");
+          panel.add(deleteWhitespace);
+
           JButton deleteInvoiceButton = new JButton("Delete Invoice");
           panel.add(deleteInvoiceButton);
+         
+         
 
           deleteInvoiceButton.addActionListener(new ActionListener() {
 
@@ -146,6 +153,10 @@ public class loginPage extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+
+          JLabel updateWhitespace = new JLabel("            ");
+          panel.add(updateWhitespace);
+
           // TODO Auto-generated method stub
           JButton updateInvoiceButton = new JButton("Update Invoice");
           panel.add(updateInvoiceButton);
@@ -195,5 +206,22 @@ public class loginPage extends JFrame {
       //JTextField f4 = new JTextField(10);
       panel.add(b4);
       //panel.add(f4);
+
+
+
+
+      b4.addActionListener(new ActionListener() {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+          JLabel updateWhitespace = new JLabel("            ");
+          panel.add(updateWhitespace);
+
+          CustomerDB retrieve = new CustomerDB();
+          retrieve.main(args);
+            }
+          });
     }
 }
+    

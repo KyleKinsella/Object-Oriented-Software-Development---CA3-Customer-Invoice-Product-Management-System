@@ -35,7 +35,6 @@ public class gui extends JFrame {
 		}//end constructor
 		
 
-
 		
 		// Listener for both buttons
 		class ButtonListener implements ActionListener {

@@ -226,18 +226,20 @@ public class signupPage extends JFrame{
 			});
 
 
+		
 			cancelButton.addActionListener(new ActionListener() {
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
-					
-					String buttonLabel = e.getActionCommand();
 
-					if(buttonLabel.equals("Cancel")) {
-						signupPage cancel = new signupPage();
-						cancel.dispose();
+					Container parent = cancelButton.getParent();
+
+					while (!(parent instanceof JFrame)) {
+						parent = parent.getParent();
 					}
+					JFrame frame = (JFrame) parent;
+					frame.dispose();
 				}
 			});
 			}

@@ -5,6 +5,7 @@ import java . sql .DriverManager;
 import java . sql .PreparedStatement;
 import java.sql.SQLException;
 import java.util.regex.Pattern;
+import java.awt.Container;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -212,6 +213,25 @@ public static void main(String [] args) {
                     }
                     }
                 }); 
+
+
+
+
+                cancelButton.addActionListener(new ActionListener() {
+
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // TODO Auto-generated method stub
+                        
+                        Container parent = cancelButton.getParent();
+
+                        while (!(parent instanceof JFrame)) {
+                            parent = parent.getParent();
+                        }
+                        JFrame frame = (JFrame) parent;
+                        frame.dispose();
+                    }
+                });
         }
             finally {
             try{
