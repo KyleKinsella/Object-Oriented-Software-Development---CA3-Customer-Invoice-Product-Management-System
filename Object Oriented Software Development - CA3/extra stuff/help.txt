@@ -1,3 +1,0 @@
-describe database name;
-
-insert = creating the crud
