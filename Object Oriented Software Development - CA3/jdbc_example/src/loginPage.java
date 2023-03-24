@@ -218,7 +218,7 @@ public class loginPage extends JFrame {
           JLabel updateWhitespace = new JLabel("            ");
           panel.add(updateWhitespace);
 
-          CustomerDB retrieve = new CustomerDB();
+          DB retrieve = new DB();
           retrieve.main(args);
             }
           });
