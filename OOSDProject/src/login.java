@@ -80,8 +80,6 @@ public class login extends loginPage {
 						main.main(null);
 
 						JOptionPane.showMessageDialog(null, "You are logged in !");
-						
-						JOptionPane.showMessageDialog(null, "This is your email: " + email);
 					}
 					else {
 						JOptionPane.showMessageDialog(null, "Login failed !");

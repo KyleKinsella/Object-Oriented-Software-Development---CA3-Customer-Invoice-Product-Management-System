@@ -32,6 +32,7 @@ if(productIdDelete == ProductId) {
     try{
         // establish connection to database
         connection = DriverManager.getConnection(DATABASE_URL, "root", "");
+        
         // create Prepared Statement for deleting data from the table
         pstat = connection.prepareStatement("Delete From product Where ProductId=?");
         pstat.setInt(1, ProductId);
@@ -40,19 +41,6 @@ if(productIdDelete == ProductId) {
         i = pstat.executeUpdate();
 
         JOptionPane.showMessageDialog(null, i + " Product has been removed from the product table !");
-        //System.out.println(i + " record successfully removed from the table ! ");
-
-
-        /* 
-        //validating
-
-        if(custIdDelete != CustomerId) {
-            JOptionPane.showMessageDialog(null, "The number you entered has already been removed previously");
-        }
-        else {
-        System.out.println(i + " record successfully removed from the table ! ");
-        }
-        */
     }
     
 

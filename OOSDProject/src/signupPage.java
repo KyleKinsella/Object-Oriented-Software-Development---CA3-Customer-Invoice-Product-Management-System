@@ -88,9 +88,6 @@ public class signupPage extends JFrame{
 		
 			Connection conn = DriverManager.getConnection(myUrl, "root", "");
 
-			JOptionPane.showMessageDialog(null, conn);
-			
-
 			String sql = "INSERT INTO customer (CustomerId, Name, DateOfBirth, Email, PhoneNumber, Password) VALUES(?,?,?,?,?,?)";
 			
 			conn.prepareStatement(sql);
